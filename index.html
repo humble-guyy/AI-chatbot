@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lovely Professional University X Cooking Class Finder</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Include the Marked library for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Include FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Fixed Header -->
+  <header class="fixed-header">
+    <div class="header-container">
+      <div class="header-section header-left">
+        <img class="lpu-logo" src="logo.png" alt="LPU Logo" />
+        <span class="uni-name">Lovely Professional University</span>
+      </div>
+      <div class="header-section header-middle">
+        <span class="presents">presents</span>
+      </div>
+      <div class="header-section header-right">
+        <img class="cook-logo" src="cook-hat.png" alt="Cook Hat Icon" />
+        <span class="bot-name">Cooking Class Finder</span>
+      </div>
+    </div>
+    <div class="inventors">
+      Inventors: Pranjal Agarwal – 12303728 | Abhay Tomar – 12301538 | Shailaja Singh – 12321463
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="content">
+    <div class="chat-wrapper">
+      <!-- Side Panel -->
+      <aside class="side-panel">
+        <button id="new-chat-btn" class="new-chat-btn">
+          <i class="fa-solid fa-plus"></i> New Chat
+        </button>
+        <h2>Conversations</h2>
+        <ul id="conversation-list">
+          <!-- Conversation tabs will be appended here -->
+        </ul>
+      </aside>
+
+      <!-- Chat Panel -->
+      <section class="chat-panel">
+        <div class="chat-log" id="chat-log">
+          <!-- Chat messages will appear here -->
+        </div>
+        <div class="input-area">
+          <div class="spinner-container" id="spinner-container">
+            <div class="spinner"></div>
+            <span class="thinking-text">Thinking...</span>
+          </div>
+          <div class="input-controls">
+            <input type="text" id="user-input" placeholder="Type your question here..." autocomplete="off" />
+            <button id="send-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

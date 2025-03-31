@@ -1,0 +1,279 @@
+/* Global Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f7e9d7, #f2d6ba);
+  color: #333;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Fixed Header */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(245,245,245,0.95);
+  border-bottom: 1px solid #d7ccc8;
+  z-index: 1000;
+  padding: 6px 10px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Header Container: three sections centered */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; /* Adjust gap as needed */
+  height: 50px;
+}
+.header-section {
+  display: flex;
+  align-items: center;
+}
+.header-left {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.2rem;
+  color: #5d4037;
+}
+.lpu-logo {
+  width: 55px;
+  height: 55px;
+  margin-right: 4px;
+}
+.header-middle {
+  font-style: italic;
+  font-size: 1rem;
+  color: #8d6e63;
+}
+.header-right {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.2rem;
+  color: #5d4037;
+  display: flex;
+  align-items: center;
+}
+.cook-logo {
+  width: 55px;
+  height: 55px;
+  margin-right: 4px;
+}
+
+/* Inventors Ribbon */
+.inventors {
+  height: 20px;
+  font-size: 0.8rem;
+  color: #8d6e63;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scrollLeft 30s linear infinite;
+  margin-top: 8px;
+}
+@keyframes scrollLeft {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Content area: increase top margin for extra gap */
+.content {
+  margin-top: 100px; /* Increased gap from header */
+  height: calc(100vh - 100px);
+}
+
+/* Chat Wrapper */
+.chat-wrapper {
+  display: flex;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Side Panel */
+.side-panel {
+  width: 33.33%;
+  background: #fbe9e7;
+  color: #5d4037;
+  padding: 20px;
+  overflow-y: auto;
+  transition: background 0.3s;
+}
+.side-panel:hover {
+  background: #f3e5f5;
+}
+.new-chat-btn {
+  width: 100%;
+  background: #ff8a65;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background 0.2s, transform 0.2s;
+}
+.new-chat-btn:hover {
+  background: #ff7043;
+  transform: scale(1.03);
+}
+.side-panel h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #d7ccc8;
+  padding-bottom: 4px;
+}
+#conversation-list {
+  list-style: none;
+}
+#conversation-list li {
+  padding: 10px;
+  border-bottom: 1px solid #d7ccc8;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+#conversation-list li:hover {
+  background: #ffe0b2;
+  transform: translateX(5px);
+}
+
+/* Chat Panel (Chatbox Container) */
+.chat-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://source.unsplash.com/1600x900/?cooking,kitchen');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Chat Log Area */
+.chat-log {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Chat Bubbles */
+.chat-message {
+  display: block;
+  max-width: 75%;
+  margin-bottom: 15px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  font-size: 1rem;
+  background: #f1f1f1;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.chat-message:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.user-message {
+  background: #d1ecf1;
+  margin-left: auto;
+  border-top-right-radius: 0;
+  color: #0c5460;
+}
+.assistant-message {
+  background: #f8f7f9;
+  margin-right: auto;
+  border-top-left-radius: 0;
+  color: #333;
+}
+
+/* Input Area */
+.input-area {
+  background: rgba(255,255,255,0.95);
+  border-top: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+.spinner-container {
+  display: none;
+  align-items: center;
+  margin-right: 10px;
+}
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(0,0,0,0.1);
+  border-left-color: #2c3e50;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.thinking-text {
+  font-weight: 500;
+  color: #666;
+}
+
+/* Input Controls */
+.input-controls {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+#user-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.2s;
+  margin-right: 10px;
+}
+#user-input:focus {
+  border-color: #2c3e50;
+}
+#send-btn {
+  background: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#send-btn:hover {
+  background: #34495e;
+  transform: scale(1.03);
+}
+#send-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
