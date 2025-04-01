@@ -1,3 +1,5 @@
+Live at : https://humble-guyy.github.io/AI-chatbot/ 
+
 # Cooking Class Finder Chatbot
 
 Welcome to the **Cooking Class Finder Chatbot**, a specialized AI chatbot designed exclusively for helping users find the best cooking classes. This chatbot provides precise and relevant answers about cooking classes while filtering out unrelated queries.
@@ -10,16 +12,9 @@ Welcome to the **Cooking Class Finder Chatbot**, a specialized AI chatbot design
 
 ## 🛠️ Technology Stack
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js (if applicable)
 - **AI API**: Deepseek R1 via OpenRouter
 - **Hosting**: GitHub Pages / Local deployment (if applicable)
 
-## 📂 Project Structure
-```
-├── assets/               # Images & logos
-├── css/                  # Stylesheets
-├── js/                   # JavaScript files
-├── index.html            # Main webpage
-├── script.js             # Chatbot functionality
-├── style.css             # Styling
-└── README.md             # Project documentation
+
+##YOU HAVE TO CHANGE THE API KEY IN THE FILE script.js.Make sure that you are using openrouter's model API key.
+
