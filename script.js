@@ -1,7 +1,7 @@
 /***********************************************************
  * 1) CONFIGURE YOUR OPENROUTER SETTINGS
  ***********************************************************/
-const OPENROUTER_API_KEY = "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"; // Replace with your actual API key
+const OPENROUTER_API_KEY = "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"; // Replace with your actual API key
 const OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions";
 const MODEL_NAME = "deepseek/deepseek-chat-v3-0324:free"; 
 
